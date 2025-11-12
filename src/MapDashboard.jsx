@@ -33,7 +33,13 @@ const MapDashboard = () => {
   // 📡 Fetch + group duplicate coordinates per PINCODE + store full record
   const fetchData = useCallback(async () => {
     try {
-      const res = await axios.get(API_URL);
+      // const res = await axios.get(API_URL);
+      const res = await axios.get(API_URL, {
+  headers: {
+    "ngrok-skip-browser-warning": "69420",
+  },
+});
+
       const rows = res.data.data || [];
 
       // 🧩 Step 1: Deduplicate by start_gps + end_gps + start_area_code + end_area_code
