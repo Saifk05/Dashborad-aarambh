@@ -19,7 +19,7 @@ const MapDashboard = () => {
   const [filterPin, setFilterPin] = useState("");
   const [allPins, setAllPins] = useState([]);
 
-  const API_URL = "http://localhost:5000/api/data";
+  const API_URL = "https://negatively-viceregal-kairi.ngrok-free.dev/api/data";
 
   // 🧹 Clean GPS "(12.97,77.59)" → [12.97, 77.59]
   const cleanCoords = (gps) => {
